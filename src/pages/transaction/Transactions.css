@@ -1,0 +1,45 @@
+.transactions {
+  width: 100%;
+  max-width: 1024px;
+  margin: 20px auto;
+}
+/* Table styling */
+.table {
+  width: 100%;
+  border-collapse: collapse; /* Merge borders */
+  margin: 20px 0;
+}
+
+/* Table header styling */
+.thead {
+  background-color: #32a4c1; /* Light grey background for header */
+  color: white;
+}
+
+.thead td,
+.tbody td {
+  font-weight: bold;
+  padding: 10px;
+  border-bottom: 2px solid #ddd; /* Border under header cells */
+  text-align: left; /* Align text to the left */
+}
+.status {
+  display: block;
+  background-color: red;
+}
+.btn-tr {
+  display: block;
+  padding: 8px 5px;
+  border: none;
+  border-radius: 10px;
+  color: #0d9c09;
+}
+.Booked {
+  background-color: rgb(246, 150, 133);
+}
+.Checkin {
+  background-color: rgb(57, 209, 57);
+}
+.Checkout {
+  background-color: rgb(211, 208, 242);
+}

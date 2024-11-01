@@ -1,0 +1,49 @@
+.reserve {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 8px;
+}
+.reserve h2 {
+  margin-bottom: 20px;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.date1 {
+}
+.reverseInfo {
+  flex: 1;
+}
+.form-controls {
+  width: 100%;
+  margin-bottom: 25px;
+}
+.form-controls label {
+  font-weight: bold;
+}
+.form-controls label,
+.form-controls input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+}
+.form-controls input {
+  padding: 5px 3px;
+}
+.btn {
+  background-color: #0071c2;
+  color: white;
+  font-weight: 500;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+.disable {
+  background-color: gray;
+}
