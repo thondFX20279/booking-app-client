@@ -5,9 +5,11 @@ import axiosClient from "../api/axiosClient";
 import { AuthContext } from "../context/AuthContext";
 import Navbar from "../components/navbar/Navbar";
 import "./Login.css";
+import { useState } from "react";
 
 const Login = () => {
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
   const { dispatch } = useContext(AuthContext);
   const {
     register,
@@ -18,6 +20,7 @@ const Login = () => {
 
   const submitHandler = async (data) => {
     try {
+      setIsLoading(true);
       const res = await axiosClient.post("/auth/login", data);
       if (res.status === 200) {
         dispatch({ type: "LOGIN_SUCCESS", payload: res.data.user });
@@ -35,6 +38,7 @@ const Login = () => {
         }
       }
     }
+    setIsLoading(false);
   };
   return (
     <>
@@ -70,7 +74,7 @@ const Login = () => {
             {errors.password && <p style={{ color: "red" }}>{errors.password.message}</p>}
           </div>
           <div className="form-control">
-            <button className="btn btn-primary" type="submit">
+            <button className="btn btn-primary" type="submit" disabled={isLoading}>
               Login
             </button>
           </div>

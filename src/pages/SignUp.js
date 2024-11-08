@@ -4,7 +4,9 @@ import { useForm } from "react-hook-form";
 import axiosClient from "../api/axiosClient";
 import Navbar from "../components/navbar/Navbar";
 import "./SignUp.css";
+import { useState } from "react";
 const SignUp = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
   const {
     register,
@@ -15,6 +17,7 @@ const SignUp = () => {
   } = useForm();
 
   const submitHandler = async (data) => {
+    setIsLoading(true);
     try {
       const res = await axiosClient.post("/auth/signup", data);
       if (res.status === 201) {
@@ -32,6 +35,7 @@ const SignUp = () => {
         }
       }
     }
+    setIsLoading(false);
   };
   return (
     <>
@@ -101,7 +105,7 @@ const SignUp = () => {
             {errors.confirmPassword && <p style={{ color: "red" }}>{errors.confirmPassword.message}</p>}
           </div>
           <div className="form-control">
-            <button className="btn btn-primary" type="submit">
+            <button className="btn btn-primary" type="submit" disabled={isLoading}>
               Register
             </button>
           </div>

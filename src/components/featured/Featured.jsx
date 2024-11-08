@@ -4,9 +4,9 @@ import "./featured.css";
 const Featured = () => {
   const { data, loading } = useFetch("/hotels/countByCity");
   const images = {
-    hanoi: "http://localhost:8080/images/cityImages/Ha-Noi.jpg",
-    hoChiMinh: "http://localhost:8080/images/cityImages/HCM.jpg",
-    daNang: "http://localhost:8080/images/cityImages/Da-Nang.jpg",
+    hanoi: "https://booking-app-server-ze5e.onrender.com/images/cityImages/Ha-Noi.jpg",
+    hoChiMinh: "https://booking-app-server-ze5e.onrender.com/images/cityImages/HCM.jpg",
+    daNang: "https://booking-app-server-ze5e.onrender.com/images/cityImages/Da-Nang.jpg",
   };
   return (
     <div className="featured">

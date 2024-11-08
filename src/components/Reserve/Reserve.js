@@ -6,6 +6,7 @@ import { DateRange } from "react-date-range";
 import { useNavigate } from "react-router-dom";
 import axiosClient from "../../api/axiosClient";
 const Reserve = ({ hotelId }) => {
+  const [isLoading, setIsLoading] = useState(false);
   const { user } = useAuth(); // Lấy user từ AuthContext nếu đã login
   const navigate = useNavigate();
   const [selectedRooms, setSelectedRooms] = useState([]); // Danh sách phòng được chọn
@@ -58,6 +59,7 @@ const Reserve = ({ hotelId }) => {
   };
   // Hàm submit đặt phòng
   const handleReserve = async () => {
+    setIsLoading(true);
     try {
       if (!user) {
         const confirm = window.confirm("You are not login! Login now?");
@@ -88,6 +90,7 @@ const Reserve = ({ hotelId }) => {
       console.error("Error reserving room:", error);
       alert("Reservation failed.");
     }
+    setIsLoading(false);
   };
 
   // Hàm xử lý khi điền thông tin form
@@ -175,7 +178,7 @@ const Reserve = ({ hotelId }) => {
           <button
             onClick={handleReserve}
             className={`btn ${!formData.email ? "disable" : ""}`}
-            disabled={!formData.email}
+            disabled={!formData.email || isLoading}
           >
             Reserve Now
           </button>
