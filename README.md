@@ -20,7 +20,7 @@ This project allows users to manage bookings with the following functions:
 # Getting Started with Create React App
 1. Clone this repository:
    ```bash
-   git clone [https://github.com/thondFX20279/booking-app-client.git]
+   git clone https://github.com/thondFX20279/booking-app-client.git
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
