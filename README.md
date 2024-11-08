@@ -1,6 +1,9 @@
-#Booking app
-## Functionalities
+# Booking App
+his is a simple web application built with ReactJS and deployed using Netlify. The project includes HTML, CSS, and JavaScript files to create a basic platform for booking and managing reservations.
 
+## Demo Link
+You can view the demo here: [Admin Dashboard Demo](https://nimble-melomakarona-e9c445.netlify.app/)
+## Functionalities
 This project allows users to manage bookings with the following functions:
 
 - **Login** - Users can log in to access the app.
