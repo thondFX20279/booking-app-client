@@ -67,7 +67,7 @@ const SignUp = () => {
           <div className="form-control">
             <label htmlFor="phoneNumber">Phone Number</label>
             <input
-              type="text"
+              type="number"
               id="phoneNumber"
               {...register("phoneNumber", {
                 required: "Phone number is required",
