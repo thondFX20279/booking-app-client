@@ -1,5 +1,5 @@
 # Booking App
-this is a simple web application built with ReactJS and deployed using Netlify. The project includes HTML, CSS, and JavaScript files to create a basic platform for booking and managing reservations.
+This is a simple web application built with ReactJS and deployed using Netlify. The project includes HTML, CSS, and JavaScript files to create a basic platform for booking and managing reservations.
 
 ## Demo Link
 You can view the demo here: [App Demo](https://booking-app-12323232.netlify.app/)
